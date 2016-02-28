@@ -8,21 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<script>
-	//Array of images which you want to show: Use path you want.
-	var images=new Array('img/intro-bg.jpg','img/downloads-bg.jpg');
-	var nextimage=0;
-	doSlideshow();
-
-	function doSlideshow(){
-		if(nextimage>=images.length){nextimage=0;}
-		$('.global-header')
-		.css('background-image','url("'+images[nextimage++]+'")')
-		.fadeIn(500,function(){
-			setTimeout(doSlideshow,1000);
-		});
-	}
-	</script>
     <title>Soundarya Lahari</title>
 
     <!-- Bootstrap Core CSS -->
@@ -46,7 +31,8 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
-    <!-- Navigation -->
+    
+	<!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -81,13 +67,14 @@
         <!-- /.container -->
     </nav>
 
+	
     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Soundarya Lahari</h1>
+                    <div class="col-md-8 col-md-offset-2" >
+                        <h3 class="brand-heading">Soundarya Lahari</h3>
                         <p class="intro-text">Bharatnatyam Dancer Extraordinare.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -104,8 +91,8 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About Me</h2>
                 <p></p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>Kum. Soundaryalahari came under the guidance and tutelage of renowned guru Padmasri Dr. Ananda Shankar Jayant at Shankarananda Kalakshetra.For the last 11 years, Soundaryalahari has trained intensively, learning the exacting Kalakshetra style of Bharatanatyam.</p>
+                <p>Under the guidance of her Guru, Soundaryalahari has steadily grown into a strong dancer, imbibing the clear angashuddam, split second tala precision, precise footwork and nuanced abhinaya, that is a hall mark of her Guru.</p>
             </div>
         </div>
     </section>
@@ -156,6 +143,9 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <!-- BackStretch Background Slider -->
+    <script src="js/jquery.backstretch.min.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -168,6 +158,21 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
 
+	<script>
+	/*
+	 * How to use Backstretch as a slideshow.
+	 * Just pass in an array of images, and optionally a duration and fade value.
+	 */
+
+	  // Duration is the amount of time in between slides,
+	  // and fade is value that determines how quickly the next image will fade in
+	  $.backstretch([
+		"img/Background/Back (4).JPG",
+		"img/Background/Back (5).JPG",
+		"img/Background/Back (7).JPG",
+		"img/Background/Back (9).JPG"
+	  ], {duration: 3000, fade: 750});
+	</script>
 </body>
 
 </html>
